@@ -5,6 +5,7 @@
     ===========================
 */
 @import "libs/normalize";
+@import "libs/lightgallery";
 @import "libs/csswizardry-grids";
 /*
     ===========================
@@ -23,7 +24,7 @@
     ===========================
 */
 
-// @import "partials/main";
+@import "partials/main";
 // @import "partials/header";
 // @import "partials/forms";
 // @import "partials/footer";
