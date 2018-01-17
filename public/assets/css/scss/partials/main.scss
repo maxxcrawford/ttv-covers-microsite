@@ -14,9 +14,14 @@ body {
 	position: relative;
 	padding: 0;
 	margin: 0;
-	font-family: $roboto-slab;
+	font-family: $oswald;
 	// color: #FFFFFF;
 	line-height: 1.5em;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 %wrapper {
@@ -42,11 +47,108 @@ body {
 }
 
 main {
+	padding: 0 0 2em;
+	margin-bottom: 2em;
+}
+
+.gallery-hero-wrapper {
+	background: black;
 	padding: 2em 0;
 	margin-bottom: 2em;
 }
 
-section {
+.gallery-hero {
+	@extend %wrapper;
+	h1 {
+		background: -webkit-linear-gradient(0deg, #FFFF00, #FF00FF);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		padding: 20px 0;
+		margin: 20px 0;
+		display: block;
+		font-size: 3em;
+		text-align: center;
+		line-height: 1em;
+		text-transform: uppercase;
+		br {
+			display: none;
+		}
+		@include mq-at-least(600px) {
+			font-size: 4em;
+		}
+		@include mq-at-least(800px) {
+			padding: 40px 0;
+			br {
+				display: block;
+			}
+			font-size: 5em;
+		}
+		@include mq-at-least(1200px) {
+			font-size: 6em;
+		}
+	}
+	.ad {
+		img {
+			display: block;
+			max-width: 100%;
+			margin: 0 0 1em;
+			&.desktop {
+				display: none;
+				@include mq-at-least(1200px) {
+					display: block;
+				}
+			}
+			&.mobile {
+				@include mq-at-least(600px) {
+					display: none;
+				}
+			}
+			&.tablet {
+				display: none;
+				@include mq-at-least(600px) {
+					display: block;
+				}
+				@include mq-at-least(1200px) {
+					display: none;
+				}
+			}
+
+		}
+		cite {
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			text-align: center;
+			font-style: normal;
+			display: block;
+			color: white;
+			font-weight: 300;
+		}
+	}
+	.leadin {
+		@extend %clearfix;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 1em 0;
+		border-top: 2px solid $white;
+		border-bottom: 2px solid $white;
+		img {
+			display: inline;
+			float: left;
+			margin: 0 1em 0.5em 0;
+		}
+		p {
+			margin: 0;
+			padding: 0;
+			color: $white;
+			line-height: 1.3em;
+		}
+	}
+}
+
+.gallery-year {
 	@extend %wrapper;
 	margin-bottom: 3em;
 	h1 {
