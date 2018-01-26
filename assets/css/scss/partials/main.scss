@@ -207,6 +207,12 @@ main {
 	max-width: 100%;
 	width: calc( 50% - 1em);
 	position: relative;
+	transition: transform 0.2s ease-out;
+	cursor: pointer;
+	box-shadow: 0 0 2px #BBB;
+	&:hover {
+		transform: scale(1.05);
+	}
 
 	@include mq-at-least(600px) {
 		width: calc( 33.333% - 1em);

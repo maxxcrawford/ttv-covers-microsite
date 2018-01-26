@@ -1832,7 +1832,12 @@ main {
   padding: 0;
   max-width: 100%;
   width: calc( 50% - 1em);
-  position: relative; }
+  position: relative;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 0 2px #BBB; }
+  .c-cover-grid__item:hover {
+    transform: scale(1.05); }
   @media screen and (min-width: 600px) {
     .c-cover-grid__item {
       width: calc( 33.333% - 1em); } }
