@@ -57,10 +57,54 @@ main {
 	margin-bottom: 2em;
 }
 
+.ad-wrapper {
+	@extend %wrapper;
+}
+
+.ad {
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0 0 1em;
+		&.desktop {
+			display: none;
+			@include mq-at-least(1200px) {
+				display: block;
+			}
+		}
+		&.mobile {
+			@include mq-at-least(600px) {
+				display: none;
+			}
+		}
+		&.tablet {
+			display: none;
+			@include mq-at-least(600px) {
+				display: block;
+			}
+			@include mq-at-least(1200px) {
+				display: none;
+			}
+		}
+
+	}
+	cite {
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		text-align: center;
+		font-style: normal;
+		display: block;
+		color: white;
+		font-weight: 300;
+	}
+}
+
 .gallery-hero {
 	@extend %wrapper;
 	h1 {
-		background: -webkit-linear-gradient(0deg, #FFFF00, #FF00FF);
+		background: -webkit-linear-gradient(0deg, #FFFF00, #FF41FC);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -84,47 +128,22 @@ main {
 			}
 			font-size: 5em;
 		}
+		@include mq-at-least(1024px) {
+			font-size: 6.5em;
+		}
 		@include mq-at-least(1200px) {
-			font-size: 6em;
+			font-size: 8em;
+		}
+		@include mq-at-least(1400px) {
+			// font-size: 8em;
+		}
+		@include mq-at-least(1600px) {
+			font-size: 10em;
 		}
 	}
 	.ad {
-		img {
-			display: block;
-			max-width: 100%;
-			margin: 0 0 1em;
-			&.desktop {
-				display: none;
-				@include mq-at-least(1200px) {
-					display: block;
-				}
-			}
-			&.mobile {
-				@include mq-at-least(600px) {
-					display: none;
-				}
-			}
-			&.tablet {
-				display: none;
-				@include mq-at-least(600px) {
-					display: block;
-				}
-				@include mq-at-least(1200px) {
-					display: none;
-				}
-			}
-
-		}
 		cite {
-			margin: 0;
-			padding: 0;
-			text-transform: uppercase;
-			letter-spacing: 3px;
-			text-align: center;
-			font-style: normal;
-			display: block;
 			color: white;
-			font-weight: 300;
 		}
 	}
 	.leadin {
@@ -137,13 +156,22 @@ main {
 		img {
 			display: inline;
 			float: left;
-			margin: 0 1em 0.5em 0;
+			margin: 0 1.5em 1em 0;
 		}
 		p {
+			font-weight: 100;
 			margin: 0;
 			padding: 0;
 			color: $white;
-			line-height: 1.3em;
+			line-height: 1.5em;
+			letter-spacing: 0.5px;
+		}
+		@include mq-at-least(768px) {
+			margin-top: 25px;
+			margin-bottom: 50px;
+		}
+		@include mq-at-least(1441px) {
+			margin-bottom: 100px;
 		}
 	}
 }
