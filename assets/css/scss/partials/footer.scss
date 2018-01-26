@@ -11,6 +11,10 @@ footer {
 	a {
 		color: #999;
 		text-decoration: none;
+		transition: color 0.2s ease-out;
+		&:hover {
+			color: #FF837E;
+		}
 	}
 	@include mq-at-least(600px) {
 		br {
