@@ -1848,6 +1848,8 @@ main {
   transition: transform 0.2s ease-out;
   cursor: pointer;
   box-shadow: 0 0 2px #BBB; }
+  .c-cover-grid__item.c-cover-grid__item--hidden {
+    display: none; }
   .c-cover-grid__item:hover {
     transform: scale(1.05); }
   @media screen and (min-width: 600px) {

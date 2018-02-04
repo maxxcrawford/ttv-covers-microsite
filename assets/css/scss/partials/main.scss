@@ -217,6 +217,9 @@ main {
 }
 
 .c-cover-grid__item {
+	&.c-cover-grid__item--hidden {
+		display: none;
+	}
 	display: block;
 	margin:  0 0.5em 1em;
 	padding: 0;
