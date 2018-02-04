@@ -153,11 +153,11 @@ main {
 		padding: 1em 0;
 		border-top: 2px solid $white;
 		border-bottom: 2px solid $white;
-		img {
-			display: inline;
-			float: left;
-			margin: 0 1.5em 1em 0;
-		}
+		// img {
+		// 	display: inline;
+		// 	float: left;
+		// 	margin: 0 1.5em 1em 0;
+		// }
 		p {
 			font-weight: 100;
 			margin: 0;
@@ -184,8 +184,24 @@ main {
 		padding: 0 8px 16px;
 		border-bottom: 1px solid $clr-2;
 		display: block;
+		font-family: $abril;
+		line-height: 1em;
+		text-align: center;
 		@include mq-at-least(768px) {
 			padding: 0 16px 16px;
+			margin: 0 0 32px;
+		}
+		@include mq-at-least(1024px) {
+			font-size: 2em;
+		}
+		@include mq-at-least(1200px) {
+			font-size: 3em;
+		}
+		@include mq-at-least(1400px) {
+			font-size: 4em;
+		}
+		@include mq-at-least(1600px) {
+			font-size: 5em;
 		}
 	}
 }
@@ -235,6 +251,39 @@ main {
 	height: 0;
 	padding-bottom: 130%; /* You define this doing height / width * 100% */
 	position: relative;
+	&:after {
+		content: "";
+		background: -webkit-linear-gradient(225deg, #FFFF00, #FF41FC);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		display: block;
+		opacity: 0;
+		transition: opacity 0.2s ease-out;
+	}
+	&:before {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		display: block;
+		content: attr(data-count);
+		z-index: 2;
+		transition: opacity 0.2s ease-out;
+		font-family: $abril;
+		font-size: 3em;
+		color: $white;
+		opacity: 0;
+	}
+	&:hover {
+		&:after {
+			opacity: 0.9;
+		}
+		&:before {
+			opacity: 1;
+		}
+	}
 }
 
 .c-cover-grid__thumb {

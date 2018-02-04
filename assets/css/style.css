@@ -1787,10 +1787,6 @@ main {
   padding: 1em 0;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff; }
-  .gallery-hero .leadin img {
-    display: inline;
-    float: left;
-    margin: 0 1.5em 1em 0; }
   .gallery-hero .leadin p {
     font-weight: 100;
     margin: 0;
@@ -1812,10 +1808,26 @@ main {
     margin: 0 0 16px;
     padding: 0 8px 16px;
     border-bottom: 1px solid #333;
-    display: block; }
+    display: block;
+    font-family: "Abril Fatface", "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive;
+    line-height: 1em;
+    text-align: center; }
     @media screen and (min-width: 768px) {
       .gallery-year h1 {
-        padding: 0 16px 16px; } }
+        padding: 0 16px 16px;
+        margin: 0 0 32px; } }
+    @media screen and (min-width: 1024px) {
+      .gallery-year h1 {
+        font-size: 2em; } }
+    @media screen and (min-width: 1200px) {
+      .gallery-year h1 {
+        font-size: 3em; } }
+    @media screen and (min-width: 1400px) {
+      .gallery-year h1 {
+        font-size: 4em; } }
+    @media screen and (min-width: 1600px) {
+      .gallery-year h1 {
+        font-size: 5em; } }
 
 .c-cover-grid {
   list-style: none;
@@ -1858,6 +1870,33 @@ main {
   padding-bottom: 130%;
   /* You define this doing height / width * 100% */
   position: relative; }
+  .c-cover-grid__thumb-wrapper:after {
+    content: "";
+    background: -webkit-linear-gradient(225deg, #FFFF00, #FF41FC);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease-out; }
+  .c-cover-grid__thumb-wrapper:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    content: attr(data-count);
+    z-index: 2;
+    transition: opacity 0.2s ease-out;
+    font-family: "Abril Fatface", "Bradley Hand ITC", "Apple Chancery", "URW Chancery L", cursive;
+    font-size: 3em;
+    color: #fff;
+    opacity: 0; }
+  .c-cover-grid__thumb-wrapper:hover:after {
+    opacity: 0.9; }
+  .c-cover-grid__thumb-wrapper:hover:before {
+    opacity: 1; }
 
 .c-cover-grid__thumb {
   width: 100%;
