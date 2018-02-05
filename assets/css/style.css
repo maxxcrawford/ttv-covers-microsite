@@ -1904,21 +1904,31 @@ main {
   position: absolute;
   max-width: 100%; }
 
-.lg-sub-html h3 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0;
-  padding: 0;
-  font-size: 1.5em; }
-.lg-sub-html a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease-out; }
-  .lg-sub-html a:hover {
-    color: #FF837E; }
-.lg-sub-html p {
-  font-size: 1.1em;
-  line-height: 1.5em; }
+.lg-sub-html {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center; }
+  .lg-sub-html h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em; }
+  .lg-sub-html a {
+    color: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease-out; }
+    .lg-sub-html a:hover {
+      color: #FF837E;
+      border-color: #FF837E; }
+  .lg-sub-html p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0; }
 
 .c-gallery-item__caption {
   display: none; }
