@@ -184,7 +184,7 @@ main {
 		padding: 0 8px 16px;
 		border-bottom: 1px solid $clr-2;
 		display: block;
-		font-family: $abril;
+		// font-family: $abril;
 		line-height: 1em;
 		text-align: center;
 		@include mq-at-least(768px) {
