@@ -104,9 +104,10 @@ main {
 .gallery-hero {
 	@extend %wrapper;
 	h1 {
+		color: #FF41FC;
 		background: -webkit-linear-gradient(0deg, #FFFF00, #FF41FC);
-		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
 		background-clip: text;
 		padding: 20px 0;
 		margin: 20px 0;
@@ -263,6 +264,7 @@ main {
 	position: relative;
 	&:after {
 		content: "";
+		background: linear-gradient(225deg, #FFFF00, #FF41FC);
 		background: -webkit-linear-gradient(225deg, #FFFF00, #FF41FC);
 		position: absolute;
 		height: 100%;

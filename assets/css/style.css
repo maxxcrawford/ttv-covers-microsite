@@ -1748,9 +1748,10 @@ main {
   font-weight: 300; }
 
 .gallery-hero h1 {
+  color: #FF41FC;
   background: -webkit-linear-gradient(0deg, #FFFF00, #FF41FC);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   padding: 20px 0;
   margin: 20px 0;
@@ -1880,6 +1881,7 @@ main {
   position: relative; }
   .c-cover-grid__thumb-wrapper:after {
     content: "";
+    background: linear-gradient(225deg, #FFFF00, #FF41FC);
     background: -webkit-linear-gradient(225deg, #FFFF00, #FF41FC);
     position: absolute;
     height: 100%;
