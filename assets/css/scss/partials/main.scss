@@ -148,11 +148,16 @@ main {
 	}
 	.leadin {
 		@extend %clearfix;
-		max-width: 600px;
+		max-width: 700px;
 		margin: 0 auto;
 		padding: 1em 0;
-		border-top: 2px solid $white;
-		border-bottom: 2px solid $white;
+		border-top: 0.5px solid #999;
+		border-bottom: 0.5px solid #999;
+		text-align: center;
+		font-size: 1.25em;
+		@include mq-at-least(1200px) {
+			font-size: 1.5em;
+		}
 		// img {
 		// 	display: inline;
 		// 	float: left;
@@ -274,7 +279,7 @@ main {
 		content: attr(data-count);
 		z-index: 2;
 		transition: opacity 0.2s ease-out;
-		font-family: $abril;
+		// font-family: $abril;
 		font-size: 3em;
 		color: $white;
 		opacity: 0;
