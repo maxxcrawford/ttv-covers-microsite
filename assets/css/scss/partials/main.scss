@@ -330,6 +330,9 @@ main {
 		line-height: 1.5em;
 		margin: 0;
 		padding: 0;
+		@include mq-at-least(600px) {
+			// font-size: 1.1em;
+		}
 	}
 }
 
