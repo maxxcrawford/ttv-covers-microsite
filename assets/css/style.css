@@ -1815,14 +1815,16 @@ main {
     border-bottom: 1px solid #333;
     display: block;
     line-height: 1em;
-    text-align: center; }
+    text-align: center;
+    font-size: 2em; }
     @media screen and (min-width: 768px) {
       .gallery-year h1 {
         padding: 0 16px 16px;
-        margin: 0 0 32px; } }
+        margin: 0 0 32px;
+        font-size: 2.5em; } }
     @media screen and (min-width: 1024px) {
       .gallery-year h1 {
-        font-size: 2em; } }
+        font-size: 3em; } }
     @media screen and (min-width: 1200px) {
       .gallery-year h1 {
         font-size: 3em; } }
