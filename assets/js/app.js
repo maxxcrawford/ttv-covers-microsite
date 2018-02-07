@@ -7,7 +7,10 @@ $(document).ready(function() {
 			fullScreen: false,
 			showThumbByDefault: false,
 			counter: false,
-			selector: '.c-cover-grid__item'
+			selector: '.c-cover-grid__item',
+			googlePlus: false,
+			twitter: false,
+			pinterest: false
 		});
 		// var myLazyLoad = new LazyLoad();
 });
