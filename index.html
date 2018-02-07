@@ -1296,25 +1296,18 @@
     </footer>
     <!-- Put HTML Here -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script> -->
     <script src="assets/js/lightgallery-all.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $(".js-lightGallery").lightGallery({
-              download: false,
-              autoplay: false,
-              autoplayControls: false,
-              actualSize: false,
-              fullScreen: false,
-              showThumbByDefault: false,
-              counter: false,
-              selector: '.c-cover-grid__item'
-            });
-            // var myLazyLoad = new LazyLoad();
-        });
+    <script src="assets/js/app.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75598780-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-75598780-2');
     </script>
-
-
 </body>
 
 </html>
